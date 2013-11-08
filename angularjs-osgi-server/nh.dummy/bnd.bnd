@@ -1,0 +1,11 @@
+Private-Package: org.example
+Service-Component: *
+-buildpath: osgi.core,\
+	osgi.cmpn,\
+	biz.aQute.bnd.annotation,\
+	junit.osgi,\
+	com.google.gson,\
+	javax.servlet,\
+	nh.angularjsosgi.server;version=latest
+Require-Bundle: slf4j.api;bundle-version="1.0.0"
+Bundle-Name: Dummy Bundle for Testing

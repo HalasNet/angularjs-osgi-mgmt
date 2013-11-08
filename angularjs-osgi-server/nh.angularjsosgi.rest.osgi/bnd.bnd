@@ -1,0 +1,12 @@
+Service-Component: *
+-buildpath: biz.aQute.bnd.annotation,\
+	junit.osgi,\
+	nh.angularjsosgi.server;version=latest,\
+	slf4j.api,\
+	osgi.cmpn;version=4.3.1.201210102024,\
+	osgi.core;version=4.3.0
+Export-Package: nh.angularjsosgi.rest.osgi.controller,\
+	nh.angularjsosgi.rest.osgi.model
+Bundle-Vendor: Nils Hartmann, nilshartmann.net
+Bundle-Description: REST API for OSGi Bundles and Services
+Bundle-Name: REST API OSGi Framework
