@@ -1,0 +1,13 @@
+Private-Package: nh.angularjsosgi.rest.osgi.felix
+Service-Component: *
+-buildpath: osgi.cmpn,\
+	biz.aQute.bnd.annotation,\
+	junit.osgi,\
+	nh.angularjsosgi.rest.osgi;version=latest,\
+	nh.angularjsosgi.server;version=latest,\
+	org.apache.felix.scr,\
+	osgi.core;version=5.0.0,\
+	slf4j.api
+Bundle-Vendor: Nils Hartmann, nilshartmann.net
+Bundle-Description: REST API for OSGi Declarative Services
+Bundle-Name: REST API Declarative Services

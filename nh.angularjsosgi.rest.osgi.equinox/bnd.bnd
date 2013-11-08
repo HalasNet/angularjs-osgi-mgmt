@@ -1,0 +1,9 @@
+Private-Package: nh.angularjsosgi.rest.osgi.equinox
+Service-Component: *
+-buildpath: osgi.core,\
+	osgi.cmpn,\
+	biz.aQute.bnd.annotation,\
+	junit.osgi,\
+	org.eclipse.osgi;version=3.9.0.v20130529-1710,\
+	nh.angularjsosgi.rest.osgi;version=latest,\
+	nh.angularjsosgi.server;version=latest
