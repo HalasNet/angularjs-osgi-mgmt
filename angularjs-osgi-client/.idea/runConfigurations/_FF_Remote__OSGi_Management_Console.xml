@@ -1,0 +1,10 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="[FF Remote] OSGi Management Console" type="JavascriptDebugType" factoryName="JavaScript Debug" singleton="true" engineId="firefox" uri="http://localhost:9000/index.html">
+    <mapping url="http://localhost:9000/libs" local-file="$PROJECT_DIR$/app/libs" />
+    <mapping url="http://localhost:9000/index.html" local-file="$PROJECT_DIR$/app/index.html" />
+    <mapping url="http://localhost:9000" local-file="$PROJECT_DIR$/app" />
+    <RunnerSettings RunnerId="JavascriptDebugRunner" />
+    <ConfigurationWrapper RunnerId="JavascriptDebugRunner" />
+    <method />
+  </configuration>
+</component>

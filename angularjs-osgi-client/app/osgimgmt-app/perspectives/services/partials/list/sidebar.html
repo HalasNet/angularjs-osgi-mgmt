@@ -1,0 +1,11 @@
+<ul class="nav bs-sidenav osgimgmt-sidebar">
+	<li>
+		<div class="input-group input-group-sm">
+			<input type="text" class="form-control" placeholder="Filter" data-ng-model="model.serviceFilter" />
+			<span style="cursor: pointer" class="input-group-addon" data-ng-click="model.serviceFilter=''"><i class="fa fa-times"></i></span>
+		</div>
+	</li>
+
+	<li  class="osgimgmt-sidebar-part osgimgmt-toggle" data-ng-click="toggleShowUnusedServices()"><i class="fa" data-ng-class="{'fa-check-square-o':model.showUnusedServices,'fa-square-o':!model.showUnusedServices}"></i>&nbsp;Show unused Services</li>
+
+</ul>

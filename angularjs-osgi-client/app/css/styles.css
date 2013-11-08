@@ -1,0 +1,294 @@
+/*******************************************************************************
+ * Copyright (c) 2013 Nils Hartmann (http://nilshartmann.net).
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v1.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html
+ *
+ * Contributors:
+ *     Nils Hartmann (nils@nilshartmann.net) - initial API and implementation
+ ******************************************************************************/
+/* http://getbootstrap.com/components/#navbar-fixed-top */
+body {
+
+	padding-top: 90px;
+
+	background-color: #F7F7F7;
+	color: #6C6C6C;
+	font-family: 'Gudea', sans-serif;
+	font-weight: normal;
+}
+
+@media screen {
+	h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+		font-family: 'Gudea', sans-serif;
+		font-weight: bold;
+	}
+}
+
+/* Sidebar (from Bootstrap Docs) */
+/*
+ * Side navigation
+ *
+ * Scrollspy and affixed enhanced navigation to highlight sections and secondary
+ * sections of docs content.
+ */
+
+/* By default it's not affixed in mobile views, so undo that */
+.bs-sidebar.affix {
+	position: static;
+}
+
+/* First level of nav */
+.bs-sidenav {
+/*	margin-top: 30px; */
+	margin-bottom: 30px;
+	padding-top:    10px;
+	padding-bottom: 10px;
+	/* text-shadow: 0 1px 0 #fff; */
+	background-color: #f9f9f9;
+	border-radius: 5px;
+	border: solid #e7e7e7 5px;
+	box-shadow: 5px 5px 20px #C8C8C8;
+}
+
+/* All levels of nav */
+.bs-sidebar .nav > li > a {
+	display: block;
+	color: #716b7a;
+	padding: 5px 20px;
+}
+.bs-sidebar .nav > li > a:hover,
+.bs-sidebar .nav > li > a:focus {
+	text-decoration: none;
+	background-color: #e5e3e9;
+	border-right: 1px solid #dbd8e0;
+}
+.bs-sidebar .nav > .active > a,
+.bs-sidebar .nav > .active:hover > a,
+.bs-sidebar .nav > .active:focus > a {
+	font-weight: bold;
+	color: #563d7c;
+	background-color: transparent;
+
+	border-right: 1px solid #563d7c;
+}
+
+/* Nav: second level (shown on .active) */
+.bs-sidebar .nav .nav {
+	display: none; /* Hide by default, but at >768px, show it */
+	margin-bottom: 8px;
+
+}
+.bs-sidebar .nav .nav > li > a {
+	padding-top:    3px;
+	padding-bottom: 3px;
+	padding-left: 30px;
+	font-size: 90%;
+}
+
+/* Show and affix the side nav when space allows it */
+@media screen and (min-width: 992px) {
+	.bs-sidebar .nav > .active > ul {
+		display: block;
+	}
+	/* Widen the fixed sidebar */
+	.bs-sidebar.affix,
+	.bs-sidebar.affix-bottom {
+		width: 213px;
+	}
+	.bs-sidebar.affix {
+		position: fixed; /* Undo the static from mobile first approach */
+		top: 180px;
+	}
+	.bs-sidebar.affix-bottom {
+		position: absolute; /* Undo the static from mobile first approach */
+	}
+	.bs-sidebar.affix-bottom .bs-sidenav,
+	.bs-sidebar.affix .bs-sidenav {
+		margin-top: 0;
+		margin-bottom: 0;
+	}
+}
+@media screen and (min-width: 1200px) {
+	/* Widen the fixed sidebar again */
+	.bs-sidebar.affix-bottom,
+	.bs-sidebar.affix {
+		width: 263px;
+	}
+}
+
+.table-hover>tbody>tr:hover>td, .table-hover>tbody>tr:hover>th {
+	background-color: #E1E1E1;
+}
+
+/* table-curved: http://stackoverflow.com/a/19272533 */
+.table-curved {
+	border-collapse: separate;
+	border: solid #e7e7e7 5px;
+	border-radius: 6px;
+	border-left: 0px;
+	border-top: 0px;
+	box-shadow: 5px 5px 20px #C8C8C8;
+}
+.table-curved > thead:first-child > tr:first-child > th {
+	border-bottom: 0px;
+	border-top: solid #e7e7e7 5px;
+}
+
+.table-curved  thead>tr>th, .table-curved  tbody>tr>th, .table-curved  tfoot>tr>th, .table-curved  thead>tr>td, .table-curved  tbody>tr>td, .table-curved  tfoot>tr>td {
+	border-top: solid #e7e7e7 5px;
+}
+
+.table-curved td, .table-curved th {
+	border-left: 5px solid #e7e7e7;
+	border-top: 5px solid #e7e7e7;
+}
+.table-curved > :first-child > :first-child > :first-child {
+	border-radius: 6px 0 0 0;
+}
+.table-curved > :first-child > :first-child > :last-child {
+	border-radius: 0 6px 0 0;
+}
+.table-curved > :last-child > :last-child > :first-child {
+	border-radius: 0 0 0 6px;
+}
+.table-curved > :last-child > :last-child > :last-child {
+	border-radius: 0 0 6px 0;
+}
+
+.osgimgmt-sortable-table > thead:first-child > tr:first-child > th {
+	cursor: pointer;
+	font-weight: bold;
+}
+
+.osgimgmt-table-selectable tbody>tr{
+	cursor: pointer;
+}
+
+
+.osgimgmt-sidebar {
+	min-height: 200px;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+.osgimgmt-sidebar li:hover {
+	background-color: #E1E1E1;
+}
+
+.osgimgmt-sidebar-part {
+	margin-top:20px;
+}
+
+.osgimgmt-state-label {
+	margin-right:7px;
+	padding-bottom: 5px;
+}
+
+.osgimgmt-state-label-icon {
+	padding-top: 2px;
+}
+
+.osgimgmt-state-toggle {
+	cursor: pointer;
+}
+
+.osgimgmt-toggle {
+	padding:5px;
+	cursor: pointer;
+	border-radius: 6px;
+}
+
+.osgimgmt-toggle i {
+	min-width:15px;
+}
+
+.osgimgmt-bundlelist tbody>tr>td
+{
+	vertical-align: middle;
+
+}
+
+.osgimgmt-title-row {
+	margin-top:-30px;
+	margin-bottom: 20px;
+
+}
+
+.osgimgmt-title-row img {
+	margin-right:15px;
+}
+
+.osgimgmt-detail-panel {
+	margin-bottom: 20px !important;
+	box-shadow: 5px 5px 20px #C8C8C8;
+	border: 5px solid #e7e7e7;
+}
+
+.osgimgmt-detail-panel > .panel-heading{
+	cursor: pointer;
+}
+
+@media screen {
+	.panel-default > .panel-heading {
+		color: #6C6C6C;
+	}
+}
+
+.tooltip-inner {
+	max-width:600px;
+}
+
+
+@media screen and (min-width: 992px) {
+	.osgimgmt-page-content {
+		margin-top:90px;
+	}
+
+	.osgimgmt-title-row {
+
+		position: fixed;
+		z-index: 90;
+		background-color: #F7F7F7;
+		width:100%;
+		margin-top:-40px;
+		height: 127px;
+	}
+}
+
+.osgimgmt-back {
+	cursor: pointer;
+}
+
+.osgimgmt-centered {
+	text-align: center;
+}
+
+.osgimgmt-ref-satisfied {
+	color: #5cb85c; /* label-success */
+}
+
+.osgimgmt-ref-satisfied-warning {
+	color: #f0ad4e; /* label-warning */
+}
+
+.osgimgmt-ref-unsatisfied {
+	color: #d9534f; /* label-error */
+}
+
+li.osgi-mgmt-list-group-item  {
+	margin-bottom: 8px;
+	padding: 0px;
+	border-radius: 4px;
+}
+
+li.osgi-mgmt-list-group-item  span.badge {
+	margin-top:1px;
+}
+
+span.badge {
+	font-family: Oxygen Mono;
+	font-weight: normal;
+	text-shadow: none;
+}

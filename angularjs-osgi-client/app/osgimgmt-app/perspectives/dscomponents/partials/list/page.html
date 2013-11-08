@@ -1,0 +1,38 @@
+<div class="alert alert-danger scale-fade" data-ng-if="model.errorMessage">
+	<button type="button" class="close" data-ng-click="clearErrorMessage()">&times;</button>
+	{{model.errorMessage}}
+</div>
+
+<table class="table table-sortable table-hover table-curved osgimgmt-sortable-table osgimgmt-bundlelist osgimgmt-table-selectable">
+	<thead>
+		<tr>
+			<th order-key="id">Id</th>
+			<th default-order order-key="name">Name</th>
+			<th order-key="declaringBundle.symbolicName">Bundle</th>
+			<th order-key="state">State</th>
+			<th>&nbsp;</th>
+		</tr>
+	</thead>
+
+	<tbody>
+		<tr  data-ng-repeat="component in model.components | componentStateFilter:model.states | filter:model.componentFilter| orderBy: orderKey">
+			<td data-ng-click="showDetails(component)">{{component.id}}</td>
+			<td>{{component.name}}</td>
+			<td><span osgi-bundle-name="component.declaringBundle" /></td>
+			<td><span osgi-dscomponent-state-label component="component" /></td>
+			<td style="text-align: center">
+				<div class="dropdown">
+					<!-- Link or button to toggle dropdown -->
+					<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+						<span class="glyphicon glyphicon-cog"></span> <span class="caret"></span>
+					</button>
+					<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+						<li  style="text-align: left" role="presentation"><a role="menuitem" data-ng-click="enableComponent(component)"><i class="fa fa-play-circle-o"></i>&nbsp;Enable Component</a></li>
+						<li  style="text-align: left" role="presentation"><a role="menuitem" data-ng-click="disableComponent(component)"><i class="fa fa-stop"></i>&nbsp;Disable Component</a></li>
+
+					</ul>
+				</div>
+			</td>
+		</tr>
+	</tbody>
+</table>
