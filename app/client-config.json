@@ -1,0 +1,23 @@
+{
+	"modules": {
+		"OsgiMgmtApp": {
+			"basedir": "osgimgmt-app/utils",
+			"scripts": "osgimgmt-app.js"
+		},
+		"OsgiMgmtApp.Bundles": {
+			"basedir": "osgimgmt-app/perspectives/bundles",
+			"scripts": "config.js,list.js,detail.js"
+		},
+		"OsgiMgmtApp.DsComponents": {
+			"basedir": "osgimgmt-app/perspectives/dscomponents",
+			"scripts": "config.js,list.js,detail.js"
+
+		},
+		"OsgiMgmtApp.Services": {
+			"basedir": "osgimgmt-app/perspectives/services",
+			"scripts": "config.js,list.js,detail.js"
+		}
+	}
+
+}
+
