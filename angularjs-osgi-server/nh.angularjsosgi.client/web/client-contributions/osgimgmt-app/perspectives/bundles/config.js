@@ -8,26 +8,13 @@
  * Contributors:
  *     Nils Hartmann (nils@nilshartmann.net) - initial API and implementation
  ******************************************************************************/
-package nh.angularjsosgi.server.json;
+angular.module('OsgiMgmtApp.Bundles', ['OsgiMgmtApp'])
 
-/**
- * Defines a Service that is able to convert objects to JSON
- * 
- * Instances should be registered at the service runtime to make them available
- * for consumers
- * 
- * @author nils
- * 
- */
-public interface JsonService {
+	.config(function (perspectiveRegistryProvider) {
+		perspectiveRegistryProvider
+			.addPerspective('bundles', 'Bundles', 'BundlesController', '/')
+				.addRoute('/bundles/:bundleId', 'BundlesDetailController')
+	});
 
-	/**
-	 * Converts the specified object ot json and writes the JSON-ified object to
-	 * the given Appendable
-	 * 
-	 * @param appendable
-	 * @param object
-	 */
-	void toJson(Appendable appendable, Object object);
 
-}
+

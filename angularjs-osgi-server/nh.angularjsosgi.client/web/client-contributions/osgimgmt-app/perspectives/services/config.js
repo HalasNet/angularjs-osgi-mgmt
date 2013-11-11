@@ -8,36 +8,13 @@
  * Contributors:
  *     Nils Hartmann (nils@nilshartmann.net) - initial API and implementation
  ******************************************************************************/
-package nh.angularjsosgi.controller;
+angular.module('OsgiMgmtApp.Services', ['OsgiMgmtApp'])
 
-/**
- * RuntimeException thrown by Controllers etc. The code will be used as HTTP
- * Response code.
- * 
- * @author Nils Hartmann (nils@nilshartmann.net)
- * 
- */
-public class RequestFailedException extends RuntimeException {
+	.config(function (perspectiveRegistryProvider) {
+		perspectiveRegistryProvider.addPerspective('services', 'Services', 'ServicesController')
+		.addRoute('/services/:serviceId', 'ServiceDetailController')
+		;
+	});
 
-	/**
-   * 
-   */
-	private static final long serialVersionUID = 1L;
 
-	private final int _code;
 
-	public RequestFailedException(String message, int code) {
-		super(message);
-
-		this._code = code;
-	}
-
-	public RequestFailedException(int code) {
-		this._code = code;
-	}
-
-	public int getCode() {
-		return _code;
-	}
-
-}

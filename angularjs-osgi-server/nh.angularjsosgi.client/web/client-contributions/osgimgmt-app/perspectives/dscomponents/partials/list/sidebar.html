@@ -1,0 +1,18 @@
+<ul class="nav bs-sidenav osgimgmt-sidebar">
+	<li>
+		<div class="input-group input-group-sm">
+			<input type="text" class="form-control" placeholder="Filter" data-ng-model="model.componentFilter" />
+			<span style="cursor: pointer" class="input-group-addon" data-ng-click="clearComponentFilter()"><i class="fa fa-times"></i></span>
+		</div>
+	</li>
+
+	<li class="osgimgmt-sidebar-part">
+		<ul class="list-group">
+
+			<li class="list-group-item osgimgmt-state-toggle" data-ng-repeat="state in model.states" data-ng-click="toggleStateFilter(state)">
+				<span class="label osgimgmt-state-label" data-ng-class="getStateClass(state)"><span class="osgi-mgmt-state-label-icon glyphicon" data-ng-class="{'glyphicon-ok':state.selected,'glyphicon-unchecked':!state.selected}"></span></span>{{state.state}}
+				<span class="pull-right">{{state.count}}</span>
+			</li>
+		</ul>
+	</li>
+</ul>

@@ -13,7 +13,7 @@ package nh.angularjsosgi.server;
 import javax.servlet.http.HttpServletResponse;
 
 import nh.angularjsosgi.controller.Response;
-import nh.angularjsosgi.server.json.JsonService;
+import nh.angularjsosgi.util.json.JsonService;
 
 /**
  * Default Response implementation

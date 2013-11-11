@@ -1,0 +1,25 @@
+<table class="table table-sortable table-hover table-curved osgimgmt-sortable-table osgimgmt-bundlelist osgimgmt-table-selectable">
+	<thead>
+	<tr>
+		<th order-key="id">Id</th>
+		<th default-order order-key="serviceInterfaces">Service Interfaces</th>
+		<th order-key="provider.symbolicName">Provider</th>
+		<th order-key="usingBundlesCount"># Using Bundles</th>
+		<th order-key="pid">PID</th>
+	</tr>
+
+	</thead>
+
+	<tbody>
+
+		<tr data-ng-repeat="s in model.services |unusedServicesFilter:model.showUnusedServices | filter:model.serviceFilter | orderBy: orderKey" >
+
+			<td data-ng-click="showDetails(s.id)"><span tooltip="{{getTooltip(s)}}">{{s.id}}</span></td>
+			<td><span data-ng-repeat="t in s.serviceInterfaces">{{t}}<br/></span></td>
+			<td><span osgi-bundle-name="s.provider" /></td>
+			<td>{{s.usingBundlesCount}}</td>
+			<td class="osgimgmt-centered"><i tooltip='{{s.pid}}' class="fa" data-ng-class="{'fa-ellipsis-horizontal': s.pid}"></i></td>
+		</tr>
+
+	</tbody>
+	</table>

@@ -8,11 +8,14 @@
  * Contributors:
  *     Nils Hartmann (nils@nilshartmann.net) - initial API and implementation
  ******************************************************************************/
-package nh.angularjsosgi.server.json.gson;
+package nh.angularjsosgi.util.json.gson;
 
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.io.Reader;
 import java.lang.reflect.Field;
 
-import nh.angularjsosgi.server.json.JsonService;
+import nh.angularjsosgi.util.json.JsonService;
 import aQute.bnd.annotation.component.Activate;
 import aQute.bnd.annotation.component.Component;
 
@@ -37,6 +40,26 @@ public class GsonJsonService implements JsonService {
 		if (object != null) {
 			_gsonParser.toJson(object, appendable);
 		}
+	}
+
+	/*
+	 * (non-Javadoc)
+	 * 
+	 * @see nh.angularjsosgi.server.json.JsonService#fromJson(java.lang.Object,
+	 * java.lang.Class)
+	 */
+	@Override
+	public <T> T fromJson(Reader reader, Class<T> type) {
+		T object = _gsonParser.fromJson(reader, type);
+
+		return object;
+	}
+
+	@Override
+	public <T> T fromJson(InputStream is, Class<T> type) {
+		InputStreamReader inputStreamReader = new InputStreamReader(is);
+
+		return fromJson(inputStreamReader, type);
 	}
 
 	@Activate

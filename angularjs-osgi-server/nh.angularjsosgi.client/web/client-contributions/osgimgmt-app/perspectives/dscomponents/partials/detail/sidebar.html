@@ -1,0 +1,8 @@
+<ul class="nav bs-sidenav osgimgmt-sidebar list-group">
+	<li class="list-group-item osgi-mgmt-list-group-item"><a href="" scroll-to='#panelDsComponentDetail:#osgimgmt-sidebar'>Overview</a></li>
+	<li class="list-group-item osgi-mgmt-list-group-item"><a href="" scroll-to='#panelDsComponentServices:#osgimgmt-sidebar'>Provided Services <span class="badge pull-right">{{model.component.service.serviceInterfaces.length}}</span></a></li>
+	<li class="list-group-item osgi-mgmt-list-group-item"><a href="" scroll-to="#panelDsComponentReferences:#osgimgmt-sidebar">References <span class="badge pull-right">{{model.component.references.length}}</span></a></li>
+	<li class="list-group-item osgi-mgmt-list-group-item"><a href="" scroll-to="#panelDsComponentProperties:#osgimgmt-sidebar">Properties <span class="badge pull-right">{{getPropertyCount(model.component.properties)}}</span></a></li>
+
+</li>
+</ul>

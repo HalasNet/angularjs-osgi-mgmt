@@ -26,10 +26,10 @@ import javax.servlet.http.HttpServletResponse;
 
 import nh.angularjsosgi.controller.Controller;
 import nh.angularjsosgi.controller.Request;
-import nh.angularjsosgi.controller.RequestErrors;
-import nh.angularjsosgi.controller.RequestFailedException;
 import nh.angularjsosgi.controller.Response;
-import nh.angularjsosgi.server.json.JsonService;
+import nh.angularjsosgi.http.RequestErrors;
+import nh.angularjsosgi.http.RequestFailedException;
+import nh.angularjsosgi.util.json.JsonService;
 import nh.eangularjsosgi.server.router.RequestMethod;
 import nh.eangularjsosgi.server.router.Router;
 
