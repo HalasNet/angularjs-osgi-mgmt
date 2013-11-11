@@ -1,0 +1,13 @@
+Private-Package: nh.angularjsosgi.client.servlet,\
+	nh.angularjsosgi.client.contributions
+Service-Component: *
+-buildpath: biz.aQute.bnd.annotation,\
+	junit.osgi,\
+	javax.servlet;version=2.5.0.v200910301333,\
+	osgi.cmpn;version=5.0.0.201305092017,\
+	osgi.core;version=5.0.0,\
+	slf4j.api;version=1.6.2,\
+	nh.angularjsosgi.server;version=latest
+-includeresource: webapp=web/webapp,client-contributions=web/client-contributions
+OsgiMgmt-Client-Contribution-Dir: client-contributions
+

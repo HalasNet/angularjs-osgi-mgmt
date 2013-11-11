@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- ======================================================================= -->
+	<!--           STYLESHEETS                                                   -->
+	<!-- ======================================================================= -->
+
+	<!-- External Fonts -->
+	<link href='libs/googlefonts/googlefonts.css' rel='stylesheet' type='text/css'>
+	<link href="libs/font-awesome_4.0.3/css/font-awesome.css" rel="stylesheet">
+
+	<!-- Twitter Bootstrap -->
+	<link href="libs/bootstrap_3.0.0/css/bootstrap.css" rel="stylesheet" media="screen">
+
+	<!-- Bootstrap theme -->
+	<link href="libs/bootstrap_3.0.0/css/bootstrap-theme.min.css" rel="stylesheet" >
+
+	<!-- AngularJS Animations from https://github.com/Augus/ngAnimate/ -->
+	<link rel="stylesheet" type="text/css" href="css/animations.css" />
+
+	<!-- Our own styles -->
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
+
+</head>
+
+<body data-ng-controller="AppController">
+
+	<!-- Navigation Bar -->
+	<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+		<div class="container">
+
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand osgimgmt-navbar-brand osgimgmt-brand" href="#">OSGi Management</a>
+			</div>
+
+			<div class="collapse navbar-collapse navbar-ex1-collapse">
+				<!-- Left side / links to perspectives -->
+				<ul class="ng-cloak nav navbar-nav" data-ng-controller="NavBarController">
+					<li data-ng-class="{'active':isActive('/' + part.path)}" data-ng-repeat="part in parts"><a href="/#/{{part.path}}">{{part.title}}</a></li>
+				</ul>
+
+				<!-- Right side -->
+				<ul class="nav navbar-nav navbar-right about-navs">
+					<li tooltip="Homepage" data-placement="bottom"><a href="http://nilshartmann.net">Nils Hartmann</a></li>
+					<li tooltip="Twitter" data-placement="bottom"><a href="http://twitter.com/nilshartmann"><i class="fa fa-lg fa-twitter"></i></a></li>
+					<li tooltip="Google Plus" data-placement="bottom"><a href="http://plus.google.com/105852364653597076711"><i class="fa fa-lg fa-google-plus"></i></a></li>
+					<li tooltip="GitHub" data-placement="bottom"><a href="http://github.com/nilshartmann"><i class="fa fa-lg fa-github"></i></a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+	<!-- Our content will be injected here -->
+	<div class="container">
+		<div ng-view></div>
+	</div>
+
+	<!-- ======================================================================= -->
+	<!--           EXTERNAL LIBRARIES                                            -->
+	<!-- ======================================================================= -->
+	<!-- jQuery  -->
+	<script src="libs/jquery_1.10.2/jquery.js"></script>
+
+	<!-- AngularJS -->
+	<script src="libs/angularjs_1.2.0-rc.3/angular.js"></script>
+	<script  src="libs/angularjs_1.2.0-rc.3/angular-animate.js"></script>
+	<script  src="libs/angularjs_1.2.0-rc.3/angular-route.js"></script>
+
+	<!-- ======================================================================= -->
+	<!--           APPLICATION FRAMEWORK                                         -->
+	<!-- ======================================================================= -->
+	<script type="text/javascript" src="platform/ui/components.js"></script>
+	<script type="text/javascript" src="platform/ui/client.js"></script>
+	<script type="text/javascript"  src="platform/perspectivemanager/perspectivemanager.js"></script>
+
+	<!-- ======================================================================= -->
+	<!--           "DYNAMICAL" BOOTSTRAP OF REQUIRED MODULES                     -->
+	<!-- ======================================================================= -->
+	<script type="text/javascript" src="platform/client-bootstrap.js"></script>
+
+	<!-- Bootstrap Javascript -->
+	<script src="libs/bootstrap_3.0.0/js/bootstrap.min.js"></script>
+
+</body>
+</html>

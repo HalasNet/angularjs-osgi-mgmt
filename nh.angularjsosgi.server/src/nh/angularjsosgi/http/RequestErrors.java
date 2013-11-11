@@ -8,7 +8,7 @@
  * Contributors:
  *     Nils Hartmann (nils@nilshartmann.net) - initial API and implementation
  ******************************************************************************/
-package nh.angularjsosgi.controller;
+package nh.angularjsosgi.http;
 
 import javax.servlet.http.HttpServletResponse;
 

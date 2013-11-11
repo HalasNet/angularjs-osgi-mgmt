@@ -1,0 +1,41 @@
+<div class="alert alert-danger" data-ng-class="{'hidden':hasErrorMessage()}">
+	<button type="button" class="close" data-ng-click="dismissErrorMessage()">&times;</button>
+	{{model.lastError}}
+</div>
+
+<table class="table table-sortable table-hover table-curved osgimgmt-sortable-table osgimgmt-bundlelist osgimgmt-table-selectable">
+	<thead>
+		<tr>
+			<th order-key="id">Id</th>
+			<th default-order order-key="name">Name</th>
+			<th order-key="symbolicName">Symbolic Name</th>
+			<th order-key="version">Version</th>
+			<th order-key="state">State</th>
+			<th>&nbsp;</th>
+		</tr>
+	</thead>
+
+	<tbody>
+		<tr  data-ng-repeat="bundle in model.bundleInfos | bundleState:model.states | filter:model.bundleFilter |orderBy: orderKey">
+			<td data-ng-click="showDetails(bundle.id)">{{bundle.id}}</td>
+			<td>{{bundle.name}}</td>
+			<td>{{bundle.symbolicName}}</td>
+			<td>{{bundle.version}}</td>
+			<td><span osgi-bundle-state-label bundle="bundle" /></td>
+			<td style="text-align: center">
+				<div class="dropdown">
+					<!-- Link or button to toggle dropdown -->
+					<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+						<span class="glyphicon glyphicon-cog"></span> <span class="caret"></span>
+					</button>
+					<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+						<li  style="text-align: left" role="presentation"><a role="menuitem" data-ng-click="startBundle(bundle.id)">Start Bundle</a></li>
+						<li role="presentation" class="divider"></li>
+						<li  style="text-align: left" role="presentation"><a role="menuitem" data-ng-click="stopBundle(bundle.id)">Stop Bundle</a></li>
+						<li  style="text-align: left"role="presentation"><a role="menuitem" data-ng-click="uninstallBundle(bundle.id)">Uninstall Bundle</a></li>
+					</ul>
+				</div>
+			</td>
+		</tr>
+	</tbody>
+</table>

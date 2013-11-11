@@ -1,0 +1,10 @@
+{
+	"modules": [
+		{"name": "OsgiMgmtApp.DsComponents",
+			"basedir": "osgimgmt-app/perspectives/dscomponents",
+			"scripts": "config.js,list.js,detail.js"
+
+		}
+	]
+}
+

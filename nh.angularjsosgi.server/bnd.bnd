@@ -4,8 +4,7 @@ Private-Package: org.springframework.core,\
 	org.springframework.web.util,\
 	nh.angularjsosgi.server,\
 	nh.eangularjsosgi.server.router,\
-	nh.angularjsosgi.server.json,\
-	nh.angularjsosgi.server.json.gson
+	nh.angularjsosgi.util.json.gson
 Service-Component: *
 -buildpath: osgi.core,\
 	osgi.cmpn,\
@@ -15,7 +14,9 @@ Service-Component: *
 	javax.servlet,\
 	com.google.gson;version=2.2.2,\
 	org.eclipse.virgo.util.parser.manifest
-Export-Package: nh.angularjsosgi.controller
+Export-Package: nh.angularjsosgi.util.json,\
+	nh.angularjsosgi.http,\
+	nh.angularjsosgi.controller
 Bundle-Vendor: Nils Hartmann, nilshartmann.net
 Bundle-Description: HTTP Server for REST API
 Bundle-Name: REST API Http Server

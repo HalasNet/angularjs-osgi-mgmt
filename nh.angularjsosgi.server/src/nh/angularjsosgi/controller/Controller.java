@@ -12,6 +12,8 @@ package nh.angularjsosgi.controller;
 
 import javax.servlet.http.HttpServletResponse;
 
+import nh.angularjsosgi.http.RequestErrors;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
