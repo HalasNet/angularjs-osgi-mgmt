@@ -292,3 +292,7 @@ span.badge {
 	font-weight: normal;
 	text-shadow: none;
 }
+
+ul.about-navs li a {
+	padding-right:3px;
+}
